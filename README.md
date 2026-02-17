@@ -1,8 +1,8 @@
-🍽️ Smart Recipe Recommendation System
+* Smart Recipe Recommendation System
 
 A Flask-based intelligent recipe recommendation system that suggests recipes based on user health profile, selected ingredients, and nutritional requirements. The system calculates BMI, BMR, daily calorie needs and recommends the most suitable meal using graph-based BFS recipe similarity search.
 
-🚀 Features
+* Features
 
 Personalized recommendation using age, height, weight, gender
 
@@ -16,7 +16,7 @@ Nutrition range filtering
 
 Cooking instructions display
 
-🛠️ Tech Stack
+* Tech Stack
 
 Python
 
@@ -28,13 +28,12 @@ HTML/CSS
 
 BFS Graph Algorithm
 
-▶️ Run Project
-pip install flask pandas
-python app.py
+* Run Project
 
+pip install flask pandas
+
+python app.py
 
 Open: http://127.0.0.1:5000/
 
-👩‍💻 Author
 
-Khushbu Jadav
