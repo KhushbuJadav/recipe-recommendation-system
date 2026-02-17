@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ recipe['recipe_name'] }}</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #28a745;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .recipe-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        img {
+            width: 220px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        img:hover {
+            opacity: 0.9;
+        }
+        #instructions {
+            display: none;
+            margin-top: 20px;
+            background: #e8f5f1;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        h3 {
+            margin-top: 15px;
+        }
+    </style>
+
+    <script>
+        function showInstructions() {
+            document.getElementById("instructions").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>{{ recipe['recipe_name'] }}</h1>
+</header>
+
+<div class="recipe-container">
+
+    <img src="{{ url_for('static', filename='images/' + recipe['image_url']) }}"
+         onclick="showInstructions()">
+
+    <h3>Ingredients</h3>
+    <ul>
+        {% for ing in ingredients %}
+            <li>{{ ing }}</li>
+        {% endfor %}
+    </ul>
+
+    <div id="instructions">
+        <h2>Cooking Instructions</h2>
+
+        <h3>Method 1</h3>
+        <ol>
+            {% for step in instructions_1 %}
+                <li>{{ step }}</li>
+            {% endfor %}
+        </ol>
+
+        <h3>Method 2</h3>
+        <ol>
+            {% for step in instructions_2 %}
+                <li>{{ step }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+
+</div>
+
+</body>
+</html>

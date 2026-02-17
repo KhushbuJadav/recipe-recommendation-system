@@ -1,0 +1,62 @@
+ingredient_id,ingredient_name,category
+1,quinoa,grain
+2,moong dal,pulse
+3,spinach,vegetable
+4,carrots,vegetable
+5,ginger,spice
+6,garlic,spice
+7,cumin seeds,spice
+8,mustard seeds,spice
+9,olive oil,fat
+10,brown rice,grain
+11,capsicum,vegetable
+12,peas,vegetable
+13,chickpeas,pulse
+14,low-fat yogurt,dairy
+15,semolina,grain
+16,tomatoes,vegetable
+17,curry leaves,herb
+18,onions,vegetable
+19,green chilies,spice
+20,turmeric powder,spice
+21,black pepper,spice
+22,lemon juice,acid
+23,coriander leaves,herb
+24,paneer (low-fat),dairy
+25,lentils,pulse
+26,milk,liquid
+27,cardamom powder,spice
+28,tea leaves,beverage
+29,mixed vegetables,vegetable
+30,rice,grain
+31,oats,grain
+32,broken wheat,grain
+33,ragi flour,grain
+34,flattened rice (poha),grain
+35,wheat flour,grain
+36,chia seeds,seed
+37,peanut butter,nut
+38,peanuts,nut
+39,banana,fruit
+40,apple,fruit
+41,sweet potato,vegetable
+42,bottle gourd,vegetable
+43,beans,vegetable
+44,cauliflower,vegetable
+45,methi leaves,herb
+46,corn kernels,vegetable
+47,green peas,vegetable
+48,tofu,protein
+49,vegetable stock,liquid
+50,vegetable broth,liquid
+51,jaggery,sweetener
+52,honey,sweetener
+53,stevia,sweetener
+54,vanilla essence,flavor
+55,lemon zest,flavor
+56,bay leaf,spice
+57,garam masala,spice
+58,red chili powder,spice
+59,tamarind pulp,acid
+60,butter,fat
+

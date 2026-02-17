@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Health-Based Recipe Recommendation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+        }
+        .container {
+            width: 520px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        .ingredients-box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 6px;
+            margin-top: 10px;
+            max-height: 180px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 6px;
+        }
+        .ingredients-box label {
+            font-weight: normal;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>User Health Details</h2>
+
+    <form action="/get_recommendation" method="POST">
+
+        <!-- AGE -->
+        <label>Age</label>
+        <input type="number" name="age" min="5" max="100" required>
+
+        <!-- GENDER -->
+        <label>Gender</label>
+        <select name="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <!-- HEIGHT -->
+        <label>Height (feet)</label>
+        <input type="number" name="height" min="3" max="8" step="0.1" required>
+
+        <!-- WEIGHT -->
+        <label>Weight (kg)</label>
+        <input type="number" name="weight" min="20" max="200" step="0.1" required>
+
+        <!-- ACTIVITY -->
+        <label>Activity Level</label>
+        <select name="activity" required>
+            <option value="low">Low (Little or no exercise)</option>
+            <option value="moderate">Moderate (3–5 days/week)</option>
+            <option value="high">High (Daily intense exercise)</option>
+        </select>
+
+        <!-- GOAL -->
+        <label>Health Goal</label>
+        <select name="goal" required>
+            <option value="weight_loss">Weight Loss</option>
+            <option value="weight_gain">Weight Gain</option>
+            <option value="maintenance">Maintain Weight</option>
+        </select>
+
+        <!-- INGREDIENT SELECTION -->
+        <label>Select Available Ingredients (Choose at least 3)</label>
+        <div class="ingredients-box">
+            {% for ingredient in ingredient_options %}
+                <label>
+                    <input type="checkbox" name="ingredient_id" value="{{ ingredient.ingredient_id }}">
+                    {{ ingredient.ingredient_name }}
+                </label>
+            {% endfor %}
+        </div>
+
+        <button type="submit">Get Recipe Recommendation</button>
+    </form>
+</div>
+
+</body>
+</html>
