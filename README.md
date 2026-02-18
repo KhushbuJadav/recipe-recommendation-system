@@ -1,4 +1,4 @@
-* Smart Recipe Recommendation System
+Recipe Recommendation System
 
 A Flask-based intelligent recipe recommendation system that suggests recipes based on user health profile, selected ingredients, and nutritional requirements. The system calculates BMI, BMR, daily calorie needs and recommends the most suitable meal using graph-based BFS recipe similarity search.
 
