@@ -4,7 +4,7 @@ An intelligent Flask-based Recipe Recommendation System that suggests personaliz
 
 The system calculates BMI, BMR, daily calorie needs, and recommends the most suitable meal using a Graph-Based BFS (Breadth First Search) similarity algorithm.
 
-# 🚀 Features
+## 🚀 Features
 
 Personalized Recipe Recommendations
 
@@ -24,7 +24,7 @@ Based on age, height, weight, and gender
 
 🌐 Clean and Simple Web Interface (Flask + HTML/CSS)
 
-# 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 Backend: Python, Flask
 
@@ -36,7 +36,7 @@ Algorithm: Breadth First Search (Graph Traversal)
 
 Dataset: CSV-based recipe and ingredient dataset
 
-# Run Project
+## Run Project
 
 pip install flask pandas
 
